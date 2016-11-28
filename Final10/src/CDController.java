@@ -9,5 +9,7 @@
  * @author Rasidha
  */
 public class CDController {
+    CDController(CDModel c_model, CDView c_view){
     
+    }
 }
