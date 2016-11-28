@@ -8,6 +8,45 @@
  *
  * @author Rasidha
  */
+
+
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 public class CDView {
+    
+    JTextField companyName;
+    JTextField departmentName;
+    JButton goodButton;
+    NavViewPanel nVpanel;
+    
+    CDModel c_model;
+    CDView c_view;
+
+    CDView(CDModel c_model) {
+       this.c_model = c_model;
+       nVpanel = new NavViewPanel();
+       
+       companyName = new JTextField("Enter Company Name");
+       departmentName = new JTextField("Enter Department Name");
+       goodButton = new JButton("Next: Add Info");
+       add(nVpanel);
+       add(companyName);
+       add(departmentName);
+       add(goodButton);
+       
+    }
+    public void switchToInfoPanel(InfoView i_view) {
+        nVpanel.removeSplash();
+        nVpanel.removeMain();
+        nVpanel.removeCD();
+        c_view.setVisible(false);
+      nVpanel.addInfo(i_view); 
+    }
+    public void addInfoButtonListener(ActionListener al){
+        goodButton.addActionListener(al);
+    }
     
 }

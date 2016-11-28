@@ -9,5 +9,8 @@
  * @author Rasidha
  */
 public class CreditController {
+    CreditController(CreditModel cc_model, CreditView cc_view){
+        
+    }
     
 }
