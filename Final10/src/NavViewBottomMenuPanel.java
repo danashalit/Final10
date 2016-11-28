@@ -4,10 +4,29 @@
  * and open the template in the editor.
  */
 
-/**
- *
- * @author DeeShalz
- */
-public class NavViewBottomMenuPanel {
-    
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class NavViewBottomMenuPanel extends JPanel{
+    JButton mainButton;
+    JButton applyButton; 
+    JButton creditButton;
+    JButton instructionsButton;
+    public NavViewBottomMenuPanel() {
+        super();       
+        mainButton = new JButton("Main");
+        applyButton = new JButton("Apply Now");
+        creditButton = new JButton("Credits");
+        instructionsButton = new JButton("Instructions");
+                                  
+        add(mainButton);
+        add(applyButton);
+        add(creditButton);
+        add(instructionsButton);
+ 
+        
+
+    }          
 }
