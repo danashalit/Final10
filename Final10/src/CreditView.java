@@ -28,5 +28,10 @@ public class CreditView {
         developer1 = new JLabel("Dana Shalit");
         developer2 = new JLabel("Rasidha Rahman");
         developer3 = new JLabel("Cecelia Knaub");
+        
+        add(nVpanel);
+        add(developer1);
+        add(developer2);
+        add(developer3);
     }
 }
