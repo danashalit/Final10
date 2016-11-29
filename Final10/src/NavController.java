@@ -56,6 +56,14 @@ public class NavController {
         o_view = new OptionView(o_model);
         o_controller = new OptionController(o_model, o_view);
         
+        cr_model = new CreditModel();        
+        cr_view = new CreditView(cr_model);
+        cr_controller = new CreditController(cr_model, cr_view); 
+        
+        in_model = new InstructionsModel();        
+        in_view = new InstructionsView(in_model);
+        in_controller = new InstructionsController(in_model, in_view); 
+        
         m_view = new MainView();
                 
         c_view.addInfoButtonListener(new InfoButtonListener());
