@@ -29,8 +29,8 @@ public class InfoView extends JPanel {
         
         fName = new JTextField("Enter First Name");
         lName = new JTextField("Enter Last Name");
-        ageSlider = new JSlider(JSlider.HORIZONTAL, 1,20,2);
-        ageSlider.setMajorTickSpacing(2);
+        ageSlider = new JSlider(JSlider.HORIZONTAL, 20,60,40);
+        ageSlider.setMajorTickSpacing(5);
         ageSlider.setPaintLabels(true);
         ageSlider.setPaintTicks(true);
         EnterAge = new JLabel("Enter Age: ");
