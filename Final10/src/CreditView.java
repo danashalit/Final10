@@ -1,4 +1,6 @@
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -18,12 +20,13 @@ public class CreditView extends JPanel {
     JLabel developer2;
     JLabel developer3;
     NavViewPanel nVpanel;
+    JButton creditButton;
     
     CreditModel cr_model;
     CreditView cr_view;
     
-    CreditView(CreditModel cc_model){
-        this.cr_model = cc_model;
+    CreditView(CreditModel cr_model){
+        this.cr_model = cr_model;
         nVpanel = new NavViewPanel();
         
         developer1 = new JLabel("Dana Shalit");
@@ -34,5 +37,17 @@ public class CreditView extends JPanel {
         add(developer1);
         add(developer2);
         add(developer3);
+    }
+    
+    public void switchToCreditPanel(InfoView i_view){
+        nVpanel.removeSplash();
+        nVpanel.removeMain();
+        nVpanel.removeCD();
+        cr_view.setVisible(true);
+        nVpanel.addCredit(cr_view);
+    }
+    
+    public void addInfoButtonListener(ActionListener al){
+        creditButton.addActionListener(al);
     }
 }
