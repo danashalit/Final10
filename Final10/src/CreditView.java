@@ -44,6 +44,9 @@ public class CreditView extends JPanel {
         nVpanel.removeSplash();
         nVpanel.removeMain();
         nVpanel.removeCD();
+        nVpanel.removeInfo();
+        nVpanel.removeInstructions();
+        nVpanel.removeOptions();
         cr_view.setVisible(true);
         nVpanel.addCredit(cr_view);
     } 
