@@ -78,4 +78,8 @@ public class NavController {
             n_view.switchToCreditPanel(cr_view);
         }
     }
+        class InstructionsButtonListener implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            n_view.switchToCreditPanel(inst_view);
+        }
 }

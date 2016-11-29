@@ -15,10 +15,10 @@ import javax.swing.JPanel;
 public class InstructionsView extends JPanel{
     private JLabel instructionsLabel;
     
-    InstructionsModel inst_model;
+    InstructionsModel in_model;
     
     InstructionsView(InstructionsModel inst_model){
-        this.inst_model = inst_model;
+        this.in_model = inst_model;
         instructionsLabel = new JLabel("Enter company names and departments"
                 + "to view payroll. It's that simple!");
         

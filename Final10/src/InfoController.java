@@ -9,5 +9,8 @@
  * @author ceciliaknaub
  */
 public class InfoController {
-    
+    InfoController(InfoModel i_model, InfoView i_view){
+        
+    }
+
 }
