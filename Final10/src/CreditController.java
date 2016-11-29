@@ -9,7 +9,7 @@
  * @author Rasidha
  */
 public class CreditController {
-    CreditController(CreditModel cc_model, CreditView cc_view){
+    CreditController(CreditModel cr_model, CreditView cr_view){
         
     }
     

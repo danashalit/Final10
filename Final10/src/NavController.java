@@ -1,4 +1,6 @@
 
+
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -32,6 +34,9 @@ public class NavController {
     InstructionsModel in_model;
     InstructionsView in_view;
     
+    OptionController o_controller;
+    OptionModel o_model;
+    OptionView o_view;
     
     MainView m_view;
     
@@ -47,11 +52,17 @@ public class NavController {
         i_view = new InfoView(i_model);
         i_controller = new InfoController(i_model, i_view);
         
+        o_model = new OptionModel();
+        o_view = new OptionView(o_model);
+        o_controller = new OptionController(o_model, o_view);
+        
         m_view = new MainView();
                 
         c_view.addInfoButtonListener(new InfoButtonListener());
         n_view.addCDButtonListener(new CDButtonListener());
         n_view.addMainButtonListener(new MainButtonListener());
+        n_view.addCreditButtonListener(new CreditButtonListener());
+        n_view.addInstructionsButtonListener(new InstructionsButtonListener());
     }
     class InfoButtonListener implements ActionListener {            
         public void actionPerformed(ActionEvent e)
@@ -68,7 +79,6 @@ public class NavController {
     class MainButtonListener implements ActionListener {            
         public void actionPerformed(ActionEvent e)
         {            
-            //Pass a Main View object to our Navigation View
             n_view.switchToMainPanel(m_view);
             
         }
@@ -78,8 +88,9 @@ public class NavController {
             n_view.switchToCreditPanel(cr_view);
         }
     }
-        class InstructionsButtonListener implements ActionListener{
+    class InstructionsButtonListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            n_view.switchToCreditPanel(inst_view);
-        }
+            n_view.switchToInstructionPanel(in_view);
+        }    
+    }
 }

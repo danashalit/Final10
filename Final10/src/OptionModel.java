@@ -6,10 +6,8 @@
 
 /**
  *
- * @author ceciliaknaub
+ * @author DeeShalz
  */
-public class InstructionsController {
-    InstructionsController(InstructionsModel in_model, InstructionsView in_view){
-        
-    }
+public class OptionModel {
+    
 }

@@ -14,17 +14,20 @@ public class NavViewBottomMenuPanel extends JPanel{
     JButton applyButton; 
     JButton creditButton;
     JButton instructionsButton;
+    JButton optionButton;
     public NavViewBottomMenuPanel() {
         super();       
         mainButton = new JButton("Main");
         applyButton = new JButton("Apply Now");
         creditButton = new JButton("Credits");
         instructionsButton = new JButton("Instructions");
+        optionButton = new JButton("Options");
                                   
         add(mainButton);
         add(applyButton);
         add(creditButton);
         add(instructionsButton);
+        add(optionButton);
  
         
 

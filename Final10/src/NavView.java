@@ -44,15 +44,13 @@ public class NavView extends JFrame {
         nVpanel.addMain(m_view);        
     }       
     
-    /*
-    public void switchToInstructionPanel(){
+    public void switchToInstructionPanel(InstructionsView in_view){
         nVpanel.removeSplash();
         nVpanel.removeInfo();
         nVpanel.removeCD();
         nVpanel.removeMain();
-        nVpanel.removeCredit();
-        nVpanel.addInstruction(in_view);
-    */
+        nVpanel.addInstructions(in_view);
+    }
     public void addMainButtonListener(ActionListener al) 
     {    
         nVpanel.menu.mainButton.addActionListener(al);
@@ -65,18 +63,30 @@ public class NavView extends JFrame {
     public void addCreditButtonListener(ActionListener al){
         nVpanel.menu.creditButton.addActionListener(al);
     }
-    /*
-    pubilc void addInstructionButtonListener(ActionListener al){
-        nVpanel.menu.instructionButton.addActionListener(al);
+    
+    public void addInstructionsButtonListener(ActionListener al){
+        nVpanel.menu.instructionsButton.addActionListener(al);
     }
     
-    */
+    public void addOptionButtonListener(ActionListener al){
+        nVpanel.menu.optionButton.addActionListener(al);
+    }
+   
 
     void switchToCreditPanel(CreditView cr_view) {
         nVpanel.removeSplash();
         nVpanel.removeCD();
         nVpanel.removeInfo();
         nVpanel.addCredit(cr_view);
+    }
+
+    void switchToOptionPanel(OptionView o_view) {
+        nVpanel.removeSplash();
+        nVpanel.removeInfo();
+        nVpanel.removeCD();
+        nVpanel.removeMain();
+        nVpanel.removeCredit();
+        nVpanel.addOption(o_view);
     }
 
 

@@ -18,8 +18,9 @@ public class NavViewPanel extends JPanel {
     InfoView i_view;
     CDView c_view;
     MainView m_view;
-    // InstructionView in_view;
+    InstructionsView in_view;
     CreditView cr_view;
+    OptionView o_view;
 
     public NavViewPanel() {
         super();
@@ -30,13 +31,12 @@ public class NavViewPanel extends JPanel {
         add(menu, BorderLayout.SOUTH);        
         add(splash, BorderLayout.CENTER);                        
     }
-    
-    //Note: Splash scrren is only shown on startup.  No need to navigate back to it.
+   
     
     
     public void addInfo(InfoView i_view)
     {
-        this.i_view = i_view; //maintain handle to this view so we can remove it
+        this.i_view = i_view;
         add(i_view, BorderLayout.CENTER);
         revalidate();
         repaint();
@@ -44,7 +44,7 @@ public class NavViewPanel extends JPanel {
 
     public void addMain(MainView m_view)
     {
-        this.m_view = m_view;  //maintain handle to this view so we can remove it
+        this.m_view = m_view; 
         add(m_view, BorderLayout.CENTER);
         revalidate();
         repaint();
@@ -61,15 +61,26 @@ public class NavViewPanel extends JPanel {
         revalidate();
         repaint();
     }
-    /*
-    public void addInstructions(){
+
+    public void addInstructions(InstructionsView in_view){
         this.in_view = in_view;
         add(in_view, BorderLayout.CENTER);
         revalidate();
         repaint();
     }
-    
-    }*/
+    public void addCredit(CreditView cr_view) {
+        this.cr_view = cr_view;
+        add(cr_view, BorderLayout.CENTER);
+        revalidate();
+        repaint();
+    }
+
+    void addOption(OptionView o_view) {
+        this.o_view = o_view;
+        add(o_view, BorderLayout.CENTER);
+        revalidate();
+        repaint();
+    }
     public void removeInfo()
     {
         if (this.i_view != null)
@@ -89,22 +100,20 @@ public class NavViewPanel extends JPanel {
        if(this.c_view != null)
         remove(this.c_view);
     }
-    /*
+    
+    public void removeOptions(){
+        if(this.o_view != null)
+            remove(this.o_view);
+    }
+
     public void removeInstructions(){
         if(this.in_view != null)
             remove(this.in_view);
     }
-    */
+ 
     public void removeCredit(){
         if(this.cr_view != null)
             remove(this.cr_view);
-    }
-
-    public void addCredit(CreditView cr_view) {
-        this.cr_view = cr_view;
-        add(cr_view, BorderLayout.CENTER);
-        revalidate();
-        repaint();
     }
 
 

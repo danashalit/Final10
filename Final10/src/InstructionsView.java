@@ -17,8 +17,8 @@ public class InstructionsView extends JPanel{
     
     InstructionsModel in_model;
     
-    InstructionsView(InstructionsModel inst_model){
-        this.in_model = inst_model;
+    InstructionsView(InstructionsModel in_model){
+        this.in_model = in_model;
         instructionsLabel = new JLabel("Enter company names and departments"
                 + "to view payroll. It's that simple!");
         

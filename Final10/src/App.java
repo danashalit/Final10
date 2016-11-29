@@ -14,7 +14,11 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        NavModel model = new NavModel();
+        NavView view = new NavView(model);
+        NavController controller = new NavController(model, view);
+        
+        view.setVisible(true);
     }
     
 }
