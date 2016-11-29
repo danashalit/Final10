@@ -81,4 +81,5 @@ public class NavViewPanel extends JPanel {
         remove(this.c_view);
     }
 
+
 }

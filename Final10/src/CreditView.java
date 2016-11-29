@@ -1,5 +1,6 @@
 
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,7 +12,7 @@ import javax.swing.JLabel;
  *
  * @author Rasidha
  */
-public class CreditView {
+public class CreditView extends JPanel {
     
     JLabel developer1;
     JLabel developer2;

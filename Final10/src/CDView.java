@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CDView {
+public class CDView extends JPanel{
     
     JTextField companyName;
     JTextField departmentName;
@@ -43,7 +43,7 @@ public class CDView {
         nVpanel.removeMain();
         nVpanel.removeCD();
         c_view.setVisible(false);
-      nVpanel.addInfo(i_view); 
+         nVpanel.addInfo(i_view); 
     }
     public void addInfoButtonListener(ActionListener al){
         goodButton.addActionListener(al);
