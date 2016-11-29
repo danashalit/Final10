@@ -68,14 +68,14 @@ public class NavViewPanel extends JPanel {
         revalidate();
         repaint();
     }
-    public void addCredit(CreditView cr_view) {
+
+    public void addCredit(CreditView cr_view){
         this.cr_view = cr_view;
         add(cr_view, BorderLayout.CENTER);
         revalidate();
         repaint();
     }
-
-    void addOption(OptionView o_view) {
+    public void addOption(OptionView o_view) {
         this.o_view = o_view;
         add(o_view, BorderLayout.CENTER);
         revalidate();

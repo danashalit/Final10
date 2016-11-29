@@ -16,12 +16,16 @@ public class InstructionsView extends JPanel{
     private JLabel instructionsLabel;
     
     InstructionsModel in_model;
+    NavViewPanel nVpanel;
     
     InstructionsView(InstructionsModel in_model){
         this.in_model = in_model;
+        nVpanel = new NavViewPanel();
+        
         instructionsLabel = new JLabel("Enter company names and departments"
                 + "to view payroll. It's that simple!");
-        
+        add(instructionsLabel);
+        add(nVpanel);
         
     }
 }

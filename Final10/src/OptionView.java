@@ -18,8 +18,11 @@ public class OptionView extends JPanel {
    JSlider hourSlider;
    JLabel hourQuestion;
    JTextField salaryRequest;
+   NavViewPanel nVpanel;
    
    OptionView(OptionModel o_model){
+        nVpanel = new NavViewPanel();
+        add(nVpanel);
         hourSlider = new JSlider(JSlider.HORIZONTAL, 1,20,2);
         hourSlider.setMajorTickSpacing(2);
         hourSlider.setPaintLabels(true);
@@ -27,8 +30,10 @@ public class OptionView extends JPanel {
         hourQuestion = new JLabel("How many hours a week would you like to work?");
         add(hourQuestion);
         add(hourSlider);
-        
+       
+
         salaryRequest = new JTextField("Enter desired salary");
         add(salaryRequest);
+        
    }
 }
