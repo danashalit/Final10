@@ -30,6 +30,8 @@ public class CreditView extends JPanel {
         developers = new JLabel("Developers: Dana Shalit, Rasidha Rahman, Cecilia Knaub");
         add(nVpanel);
         add(developers);
+        nVpanel.removeSplash();
+        nVpanel.removeMenu();
         
     }
     

@@ -38,7 +38,8 @@ public class OptionView extends JPanel {
 
         salaryRequest = new JTextField("Enter desired salary");
         add(salaryRequest);
-        
+        nVpanel.removeSplash();
+        nVpanel.removeMenu();
    }
    
    

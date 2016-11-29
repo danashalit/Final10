@@ -1,4 +1,5 @@
 
+import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -26,6 +27,7 @@ public class InstructionsView extends JPanel{
                 + "to view payroll. It's that simple!");
         add(instructionsLabel);
         add(nVpanel);
-        
+        nVpanel.removeSplash();
+        nVpanel.removeMenu();
     }
 }

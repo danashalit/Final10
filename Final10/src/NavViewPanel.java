@@ -100,7 +100,9 @@ public class NavViewPanel extends JPanel {
        if(this.c_view != null)
         remove(this.c_view);
     }
-    
+    public void removeMenu(){
+        remove(menu);
+    }
     public void removeOptions(){
         if(this.o_view != null)
             remove(this.o_view);
