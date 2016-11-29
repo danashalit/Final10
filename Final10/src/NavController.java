@@ -68,11 +68,11 @@ public class NavController {
         m_view = new MainView();
         nVpanel = new NavViewPanel();
         c_view.addInfoButtonListener(new InfoButtonListener());
-        n_view.addCDButtonListener(new CDButtonListener());
-        n_view.addMainButtonListener(new MainButtonListener());
-        n_view.addCreditButtonListener(new CreditButtonListener());
-        n_view.addInstructionsButtonListener(new InstructionsButtonListener());
-        n_view.addOptionButtonListener(new OptionsButtonListener());
+        //n_view.addCDButtonListener(new CDButtonListener());
+        //n_view.addMainButtonListener(new MainButtonListener());
+        //n_view.addCreditButtonListener(new CreditButtonListener());
+        //n_view.addInstructionsButtonListener(new InstructionsButtonListener());
+        //n_view.addOptionButtonListener(new OptionsButtonListener());
     }
     class InfoButtonListener implements ActionListener {            
         public void actionPerformed(ActionEvent e)

@@ -17,7 +17,7 @@ public class NavViewSplashPanel extends JPanel {
     JLabel InfoLabel;
     NavViewSplashPanel()
     {
-            splashButton = new JButton("Hello there");            
+            splashButton = new JButton(new ImageIcon ("rasidha/desktop/businessapplication.png"));            
             add(splashButton);
             
             InfoLabel = new JLabel("No options selected yet.");
