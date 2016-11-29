@@ -104,9 +104,6 @@ public class NavController {
             n_view.switchToInstructionPanel(in_view);
         }    
     }
-    class OptionsButtonListener implements ActionListener{
-        public void actionPerformed(ActionEvent e){
-            n_view.switchToOptionPanel(o_view);
-        }
-    }
+    
+    
 }
