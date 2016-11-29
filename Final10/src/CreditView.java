@@ -25,8 +25,8 @@ public class CreditView extends JPanel {
     CreditModel cr_model;
     CreditView cr_view;
     
-    CreditView(CreditModel cc_model){
-        this.cr_model = cc_model;
+    CreditView(CreditModel cr_model){
+        this.cr_model = cr_model;
         nVpanel = new NavViewPanel();
         
         developer1 = new JLabel("Dana Shalit");
