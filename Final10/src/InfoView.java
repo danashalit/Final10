@@ -23,7 +23,7 @@ public class InfoView extends JPanel {
     JLabel EnterAge;
 
     InfoModel i_model;
-    
+    NavViewPanel nVpanel;
     InfoView(InfoModel i_model){
         this.i_model = i_model;
         

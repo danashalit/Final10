@@ -39,9 +39,6 @@ public class CDView extends JPanel{
        
     }
     public void switchToInfoPanel(InfoView i_view) {
-        nVpanel.removeSplash();
-        nVpanel.removeMain();
-        nVpanel.removeCD();
         nVpanel.addInfo(i_view); 
     }
     public void addInfoButtonListener(ActionListener al){

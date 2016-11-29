@@ -39,6 +39,7 @@ public class NavController {
     OptionView o_view;
     
     MainView m_view;
+    NavViewPanel nVpanel;
     
     public NavController(NavModel n_model, NavView n_view){
         this.n_model = n_model;
@@ -65,7 +66,7 @@ public class NavController {
         in_controller = new InstructionsController(in_model, in_view); 
         
         m_view = new MainView();
-                
+        nVpanel = new NavViewPanel();
         c_view.addInfoButtonListener(new InfoButtonListener());
         n_view.addCDButtonListener(new CDButtonListener());
         n_view.addMainButtonListener(new MainButtonListener());
@@ -83,6 +84,7 @@ public class NavController {
     class CDButtonListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
             n_view.switchToCDPanel(c_view);
+            nVpanel.removeMain();
         }
     }
     class MainButtonListener implements ActionListener {            
