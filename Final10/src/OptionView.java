@@ -1,4 +1,6 @@
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
@@ -19,6 +21,8 @@ public class OptionView extends JPanel {
    JLabel hourQuestion;
    JTextField salaryRequest;
    NavViewPanel nVpanel;
+   JButton optionButton;
+   OptionView o_view;
    
    OptionView(OptionModel o_model){
         nVpanel = new NavViewPanel();
@@ -36,4 +40,6 @@ public class OptionView extends JPanel {
         add(salaryRequest);
         
    }
+   
+  
 }

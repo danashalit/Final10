@@ -101,4 +101,6 @@ public class NavController {
             n_view.switchToInstructionPanel(in_view);
         }    
     }
+    
+    
 }
