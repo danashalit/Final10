@@ -42,8 +42,7 @@ public class CDView extends JPanel{
         nVpanel.removeSplash();
         nVpanel.removeMain();
         nVpanel.removeCD();
-        c_view.setVisible(false);
-         nVpanel.addInfo(i_view); 
+        nVpanel.addInfo(i_view); 
     }
     public void addInfoButtonListener(ActionListener al){
         goodButton.addActionListener(al);

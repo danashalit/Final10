@@ -23,8 +23,8 @@ public class OptionView extends JPanel {
    OptionView(OptionModel o_model){
         nVpanel = new NavViewPanel();
         add(nVpanel);
-        hourSlider = new JSlider(JSlider.HORIZONTAL, 1,20,2);
-        hourSlider.setMajorTickSpacing(2);
+        hourSlider = new JSlider(JSlider.HORIZONTAL, 0,20,2);
+        hourSlider.setMajorTickSpacing(10);
         hourSlider.setPaintLabels(true);
         hourSlider.setPaintTicks(true);
         hourQuestion = new JLabel("How many hours a week would you like to work?");
