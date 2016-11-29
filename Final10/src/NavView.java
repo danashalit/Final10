@@ -16,7 +16,7 @@ public class NavView extends JFrame {
 
     NavModel model;
     NavViewPanel nVpanel;
-    JButton goodButton;
+   //  JButton goodButton;
     
     NavView(NavModel model){
         super("Primary View");
@@ -42,7 +42,17 @@ public class NavView extends JFrame {
         nVpanel.removeInfo();
         nVpanel.removeCD();
         nVpanel.addMain(m_view);        
-    }         
+    }       
+    
+    /*
+    public void switchToInstructionPanel(){
+        nVpanel.removeSplash();
+        nVpanel.removeInfo();
+        nVpanel.removeCD();
+        nVpanel.removeMain();
+        nVpanel.removeCredit();
+        nVpanel.addInstruction(in_view);
+    */
     public void addMainButtonListener(ActionListener al) 
     {    
         nVpanel.menu.mainButton.addActionListener(al);
@@ -51,8 +61,23 @@ public class NavView extends JFrame {
         
         nVpanel.menu.applyButton.addActionListener(al);
     }
-
-
-
     
+    public void addCreditButtonListener(ActionListener al){
+        nVpanel.menu.creditButton.addActionListener(al);
+    }
+    /*
+    pubilc void addInstructionButtonListener(ActionListener al){
+        nVpanel.menu.instructionButton.addActionListener(al);
+    }
+    
+    */
+
+    void switchToCreditPanel(CreditView cr_view) {
+        nVpanel.removeSplash();
+        nVpanel.removeCD();
+        nVpanel.removeInfo();
+        nVpanel.addCredit(cr_view);
+    }
+
+
 }

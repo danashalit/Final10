@@ -4,10 +4,19 @@
  * and open the template in the editor.
  */
 
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
 /**
  *
  * @author DeeShalz
  */
-public class MainView {
-    
+public class MainView extends JPanel {
+    MainView()
+    {
+        JButton welcomeButton = new JButton("Welcome to the Application!");
+        add(welcomeButton);
+        
+        
+    }
 }

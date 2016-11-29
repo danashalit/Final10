@@ -24,6 +24,13 @@ public class NavController {
     InfoModel i_model;
     InfoView i_view;
     
+    CreditController cr_controller;
+    CreditModel cr_model;
+    CreditView cr_view;
+    
+    InstructionsController in_controller;
+    InstructionsModel in_model;
+    InstructionsView in_view;
     
     
     MainView m_view;
@@ -66,4 +73,9 @@ public class NavController {
             
         }
     } 
+    class CreditButtonListener implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            n_view.switchToCreditPanel(cr_view);
+        }
+    }
 }
