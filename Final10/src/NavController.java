@@ -3,6 +3,9 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,6 +24,7 @@ public class NavController {
     CDController c_controller;
     CDModel c_model;
     CDView c_view;
+    JButton credits;
     
     InfoController i_controller;
     InfoModel i_model;
