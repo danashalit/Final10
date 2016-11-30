@@ -5,6 +5,7 @@
  */
 
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -14,10 +15,14 @@ import javax.swing.JPanel;
  */
 public class MainView extends JPanel {
     NavViewPanel nVpanel;
+    JButton mainButton;
     MainView()
     {
         JButton welcomeButton = new JButton("Welcome to the Application!");
         add(welcomeButton);
+        
+        mainButton = new JButton(new ImageIcon ("src/images/businessapplication.png"));            
+            add(mainButton);
         
         nVpanel = new NavViewPanel();
         add(nVpanel);
