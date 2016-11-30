@@ -21,7 +21,7 @@ public class MainView extends JPanel {
         JButton welcomeButton = new JButton("Welcome to the Application!");
         add(welcomeButton);
         
-        mainButton = new JButton(new ImageIcon ("src/images/businessapplication.png"));            
+        mainButton = new JButton(new ImageIcon ("src/images/communical.png"));            
             add(mainButton);
         
         nVpanel = new NavViewPanel();
