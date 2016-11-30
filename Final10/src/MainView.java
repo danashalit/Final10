@@ -28,6 +28,8 @@ public class MainView extends JPanel {
         add(nVpanel);
         nVpanel.removeSplash();
         nVpanel.removeMenu();
+        
+        
     }
    
 }
