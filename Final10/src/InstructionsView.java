@@ -14,13 +14,12 @@ import javax.swing.JPanel;
  * @author ceciliaknaub
  */
 public class InstructionsView extends JPanel{
-    private JLabel instructionsLabel;
+    JLabel instructionsLabel;
     
     InstructionsModel in_model;
     NavViewPanel nVpanel;
     
     InstructionsView(InstructionsModel in_model){
-        this.in_model = in_model;
         nVpanel = new NavViewPanel();
         
         instructionsLabel = new JLabel("Enter company names and departments "
