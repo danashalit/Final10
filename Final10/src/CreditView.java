@@ -34,24 +34,5 @@ public class CreditView extends JPanel {
         
     }
     
-    public void switchToCreditPanel(CreditView cr_view){
-        nVpanel.removeSplash();
-        nVpanel.removeMain();
-        nVpanel.removeCD();
-        nVpanel.removeInfo();
-        nVpanel.removeInstructions();
-        nVpanel.removeOptions();
-        nVpanel.addCredit(cr_view);
-        n_view.removeAll();
-        nVpanel.addCredit(cr_view);
-        cr_view.setVisible(true);
-        
-        
-        
-        
-    } 
-    
-    public void addInfoButtonListener(ActionListener al){
-        creditButton.addActionListener(al);
-    }
+   
 }
