@@ -41,14 +41,14 @@ public class NavView extends JFrame {
     public void addMainButtonListener(ActionListener al) {    
         nVpanel.menu.mainButton.addActionListener(al);
     } 
-    public void switchToCDPanel(CDView c_view){
+    public void switchToCDPanel(CDViewPanel cDpanel){
         nVpanel.removeInstructions();
         nVpanel.removeCredit();
         nVpanel.removeOptions();
         nVpanel.removeMain();
         nVpanel.removeInfo();
         nVpanel.removeSplash();
-        nVpanel.addCD(c_view); 
+        nVpanel.addCD(cDpanel); 
     }      
     public void addCDButtonListener(ActionListener al){
         nVpanel.menu.applyButton.addActionListener(al);
@@ -92,17 +92,18 @@ public class NavView extends JFrame {
         nVpanel.menu.optionButton.addActionListener(al);
     }
     public void switchToInfoPanel(InfoView i_view) {
+        nVpanel.removeCD();
         nVpanel.removeCredit();
         nVpanel.removeInfo();
         nVpanel.removeMain();
         nVpanel.removeInstructions();
         nVpanel.removeOptions();
         nVpanel.removeSplash();
-        nVpanel.removeCD();
         nVpanel.addInfo(i_view); 
     }
     public void addInfoButtonListener(ActionListener al){
         goodButton.addActionListener(al);
+        
     }
 
 

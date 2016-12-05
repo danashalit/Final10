@@ -1,3 +1,12 @@
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,18 +15,10 @@
 
 /**
  *
- * @author Rasidha
+ * @author DeeShalz
  */
-
-
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-public class CDView extends JPanel{
-    
-    JTextField companyName;
+public class CDViewPanel extends JPanel{
+JTextField companyName;
     JTextField departmentName;
     JButton goodButton;
     NavViewPanel nVpanel;
@@ -25,7 +26,7 @@ public class CDView extends JPanel{
     CDModel c_model;
     CDView c_view;
 
-    CDView(CDModel c_model) {
+    CDViewPanel() {
        this.c_model = c_model;
        nVpanel = new NavViewPanel();
        add(nVpanel);
@@ -46,6 +47,12 @@ public class CDView extends JPanel{
     }
     public void addInfoButtonListener(ActionListener al){
         goodButton.addActionListener(al);
+    }
+    public void addCD(CDView c_view){
+        this.c_view = c_view;
+        add(c_view, BorderLayout.CENTER);
+        revalidate();
+        repaint();
     }
     
 }

@@ -21,13 +21,12 @@ public class NavViewPanel extends JPanel {
     InstructionsView in_view;
     CreditView cr_view;
     OptionView o_view;
-
+    CDViewPanel cDpanel;
     public NavViewPanel() {
         super();
         setLayout(new BorderLayout());     
         menu = new NavViewBottomMenuPanel();
         splash = new NavViewSplashPanel();
-        
         add(menu, BorderLayout.SOUTH);        
         add(splash, BorderLayout.CENTER);                        
     }
@@ -49,6 +48,12 @@ public class NavViewPanel extends JPanel {
         revalidate();
         repaint();
     }    
+    public void addCDPanel(CDViewPanel cDpanel){
+        this.cDpanel = cDpanel;
+        add(this.cDpanel, BorderLayout.CENTER);
+        revalidate();
+        repaint();
+    }
     public void addCD(CDView c_view){
         this.c_view = c_view;
         add(c_view, BorderLayout.CENTER);
@@ -99,6 +104,10 @@ public class NavViewPanel extends JPanel {
     public void removeCD(){
        if(this.c_view != null)
         remove(this.c_view);
+    }
+    public void removeCDPanel(){
+        if(this.cDpanel != null)
+        remove(this.cDpanel);
     }
     public void removeMenu(){
         remove(menu);

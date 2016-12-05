@@ -24,10 +24,11 @@ public class InfoView extends JPanel {
 
     InfoModel i_model;
     NavViewPanel nVpanel;
+    CDViewPanel cDpanel;
     InfoView(InfoModel i_model){
+        this.i_model = i_model;
         nVpanel = new NavViewPanel();
         add(nVpanel);
-        this.i_model = i_model;
         
         fName = new JTextField("Enter First Name");
         lName = new JTextField("Enter Last Name");
@@ -35,16 +36,20 @@ public class InfoView extends JPanel {
         ageSlider.setMajorTickSpacing(5);
         ageSlider.setPaintLabels(true);
         ageSlider.setPaintTicks(true);
-        EnterAge = new JLabel("Enter Age: ");
+        EnterAge = new JLabel("Age: ");
+        saveButton = new JButton("Save Info");
 
+        nVpanel.removeSplash();
+        nVpanel.removeMenu();
+        nVpanel.removeCD();
+        // nVpanel.remove();
         
         add(fName);
         add(lName);
         add(EnterAge);
         add(ageSlider);
-        nVpanel.removeSplash();
-        nVpanel.removeMenu();
-        nVpanel.removeCD();
+        add(saveButton);
+        
         
     }
 
