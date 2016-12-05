@@ -22,7 +22,7 @@ public class NavView extends JFrame {
         super("Primary View");
         this.model = model;
                           
-        setSize(600, 500);
+        setSize(800, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         nVpanel = new NavViewPanel();
@@ -31,7 +31,6 @@ public class NavView extends JFrame {
     }
     public void switchToMainPanel(MainView m_view){
         nVpanel.removeCredit();
-        nVpanel.removeInfo();
         nVpanel.removeInstructions();
         nVpanel.removeOptions();
         nVpanel.removeCD();
@@ -41,14 +40,13 @@ public class NavView extends JFrame {
     public void addMainButtonListener(ActionListener al) {    
         nVpanel.menu.mainButton.addActionListener(al);
     } 
-    public void switchToCDPanel(CDViewPanel cDpanel){
+    public void switchToCDPanel(CDView c_view){
         nVpanel.removeInstructions();
         nVpanel.removeCredit();
         nVpanel.removeOptions();
         nVpanel.removeMain();
-        nVpanel.removeInfo();
         nVpanel.removeSplash();
-        nVpanel.addCD(cDpanel); 
+        nVpanel.addCD(c_view); 
     }      
     public void addCDButtonListener(ActionListener al){
         nVpanel.menu.applyButton.addActionListener(al);
@@ -57,8 +55,6 @@ public class NavView extends JFrame {
         nVpanel.removeCD();
         nVpanel.removeOptions();
         nVpanel.removeCredit();
-        nVpanel.removeInfo();
-        nVpanel.removeInfo();
         nVpanel.removeMain();
         nVpanel.removeSplash();
         nVpanel.addInstructions(in_view);
@@ -68,7 +64,6 @@ public class NavView extends JFrame {
     }
     public void switchToCreditPanel(CreditView cr_view) {
         nVpanel.removeCD();
-        nVpanel.removeInfo();
         nVpanel.removeMain();
         nVpanel.removeInstructions();
         nVpanel.removeOptions();
@@ -80,7 +75,6 @@ public class NavView extends JFrame {
     }
     public void switchToOptionPanel(OptionView o_view) {
         nVpanel.removeCD();
-        nVpanel.removeInfo();
         nVpanel.removeMain();
         nVpanel.removeInstructions();
         nVpanel.removeCredit();
@@ -90,20 +84,6 @@ public class NavView extends JFrame {
     }
     public void addOptionButtonListener(ActionListener al){
         nVpanel.menu.optionButton.addActionListener(al);
-    }
-    public void switchToInfoPanel(InfoView i_view) {
-        nVpanel.removeCD();
-        nVpanel.removeCredit();
-        nVpanel.removeInfo();
-        nVpanel.removeMain();
-        nVpanel.removeInstructions();
-        nVpanel.removeOptions();
-        nVpanel.removeSplash();
-        nVpanel.addInfo(i_view); 
-    }
-    public void addInfoButtonListener(ActionListener al){
-        goodButton.addActionListener(al);
-        
     }
 
 

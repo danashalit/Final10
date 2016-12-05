@@ -15,13 +15,12 @@ public class NavViewPanel extends JPanel {
     NavViewBottomMenuPanel menu;
     NavViewSplashPanel splash;
     
-    InfoView i_view;
     CDView c_view;
     MainView m_view;
     InstructionsView in_view;
     CreditView cr_view;
     OptionView o_view;
-    CDViewPanel cDpanel;
+
     public NavViewPanel() {
         super();
         setLayout(new BorderLayout());     
@@ -29,16 +28,6 @@ public class NavViewPanel extends JPanel {
         splash = new NavViewSplashPanel();
         add(menu, BorderLayout.SOUTH);        
         add(splash, BorderLayout.CENTER);                        
-    }
-   
-    
-    
-    public void addInfo(InfoView i_view)
-    {
-        this.i_view = i_view;
-        add(i_view, BorderLayout.CENTER);
-        revalidate();
-        repaint();
     }
 
     public void addMain(MainView m_view)
@@ -48,12 +37,7 @@ public class NavViewPanel extends JPanel {
         revalidate();
         repaint();
     }    
-    public void addCDPanel(CDViewPanel cDpanel){
-        this.cDpanel = cDpanel;
-        add(this.cDpanel, BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
+
     public void addCD(CDView c_view){
         this.c_view = c_view;
         add(c_view, BorderLayout.CENTER);
@@ -86,11 +70,6 @@ public class NavViewPanel extends JPanel {
         revalidate();
         repaint();
     }
-    public void removeInfo()
-    {
-        if (this.i_view != null)
-            remove(this.i_view);
-    }
     public void removeMain()
     {
         if (this.m_view != null)
@@ -105,10 +84,7 @@ public class NavViewPanel extends JPanel {
        if(this.c_view != null)
         remove(this.c_view);
     }
-    public void removeCDPanel(){
-        if(this.cDpanel != null)
-        remove(this.cDpanel);
-    }
+
     public void removeMenu(){
         remove(menu);
     }
