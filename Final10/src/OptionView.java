@@ -1,4 +1,5 @@
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -17,30 +18,66 @@ import javax.swing.JTextField;
  * @author DeeShalz
  */
 public class OptionView extends JPanel {
-   JSlider hourSlider;
+   private JSlider hourSlider;
    JLabel hourQuestion;
-   JTextField salaryRequest;
+   private JTextField salaryRequest;
+   JButton saveOptionsButton;
    NavViewPanel nVpanel;
    JButton optionButton;
+   JLabel summaryLabel;
+
    OptionView o_view;
+    
+   private Object o_model;
    
    OptionView(OptionModel o_model){
+       this.o_model = o_model;
+       
         nVpanel = new NavViewPanel();
         add(nVpanel);
-        hourSlider = new JSlider(JSlider.HORIZONTAL, 0,20,2);
+        hourSlider = new JSlider(JSlider.HORIZONTAL, 0,40,2);
         hourSlider.setMajorTickSpacing(10);
         hourSlider.setPaintLabels(true);
         hourSlider.setPaintTicks(true);
         hourQuestion = new JLabel("How many hours a week would you like to work?");
         add(hourQuestion);
         add(hourSlider);
+        
+        saveOptionsButton = new JButton("Save Options");
+        add(saveOptionsButton);
        
-
         salaryRequest = new JTextField("Enter desired salary");
         add(salaryRequest);
+        
+        summaryLabel = new JLabel();
+        add(summaryLabel);
+            
         nVpanel.removeSplash();
         nVpanel.removeMenu();
    }
    
-   
+    public void addSaveOptionsButtonListener(ActionListener al){
+        getSaveOptionsButton().addActionListener(al);
+    }
+    
+    public JButton getSaveOptionsButton() {
+        return saveOptionsButton;
+    }
+
+
+    public JSlider getHourSlider() {
+        return hourSlider;
+    }
+
+    public String getSalaryRequest() {
+        return salaryRequest.getText();
+    }
+
+
+
+
+
+
+
+
 }
