@@ -12,6 +12,8 @@ public class Employee {
     private String fName;
     private String lName;
     private int age;
+    private String companyName;
+    private String departmentName;
     
     Employee(){
         
@@ -41,6 +43,12 @@ public class Employee {
         this.age = age;
     }
     
+    public void setcompanyName(String companyName){
+        this.companyName = companyName;
+    }
     
+    public void setdepartmentName(String departmentName){
+        this.departmentName = departmentName;
+    }
     
 }
