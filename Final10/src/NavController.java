@@ -26,10 +26,6 @@ public class NavController {
     CDView c_view;
     JButton credits;
     
-    InfoController i_controller;
-    InfoModel i_model;
-    InfoView i_view;
-    
     CreditController cr_controller;
     CreditModel cr_model;
     CreditView cr_view;
@@ -52,10 +48,7 @@ public class NavController {
         c_model = new CDModel();        
         c_view = new CDView(c_model);
         c_controller = new CDController(c_model, c_view); 
-        
-        i_model = new InfoModel();
-        i_view = new InfoView(i_model);
-        i_controller = new InfoController(i_model, i_view);
+
         
         o_model = new OptionModel();
         o_view = new OptionView(o_model);
@@ -71,20 +64,12 @@ public class NavController {
         
         m_view = new MainView();
         nVpanel = new NavViewPanel();
-        c_view.addInfoButtonListener(new InfoButtonListener());
         n_view.addCDButtonListener(new CDButtonListener());
         n_view.addMainButtonListener(new MainButtonListener());
         n_view.addCreditButtonListener(new CreditButtonListener());
         n_view.addInstructionsButtonListener(new InstructionsButtonListener());
         n_view.addOptionButtonListener(new OptionsButtonListener());
-    }
-    class InfoButtonListener implements ActionListener {            
-        public void actionPerformed(ActionEvent e)
-        {            
-            //Pass an Options View object to our Navigation View
-            c_view.switchToInfoPanel(i_view);
-        }
-    }     
+    }   
     class CDButtonListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
             n_view.switchToCDPanel(c_view);
