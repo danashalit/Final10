@@ -5,8 +5,10 @@
  */
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class NavViewBottomMenuPanel extends JPanel{
@@ -28,8 +30,13 @@ public class NavViewBottomMenuPanel extends JPanel{
         add(creditButton);
         add(instructionsButton);
         add(optionButton);
+        
+        
+        
+    }
+    
  
         
 
-    }          
+           
 }

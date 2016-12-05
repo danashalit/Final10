@@ -57,6 +57,8 @@ public class CDView extends JPanel{
        nVpanel.removeMenu();
        nVpanel.removeSplash();
        
+       
+       
     }
     
 }
