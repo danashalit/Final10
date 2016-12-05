@@ -42,13 +42,21 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
-    
-    public void setcompanyName(String companyName){
+    public String getCompanyName() {
+        return companyName;
+    }
+    public void setCompanyName(String companyName){
         this.companyName = companyName;
     }
-    
+    public String getDepartmentName(){
+        return departmentName;
+    }
     public void setdepartmentName(String departmentName){
         this.departmentName = departmentName;
     }
+
+    
+
+    
     
 }

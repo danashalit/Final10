@@ -16,7 +16,6 @@ public class NavView extends JFrame {
 
     NavModel model;
     NavViewPanel nVpanel;
-    JButton goodButton;
     
     NavView(NavModel model){
         super("Primary View");
@@ -85,7 +84,6 @@ public class NavView extends JFrame {
     public void addOptionButtonListener(ActionListener al){
         nVpanel.menu.optionButton.addActionListener(al);
     }
-
 
 
 

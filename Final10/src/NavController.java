@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -37,6 +40,13 @@ public class NavController {
     OptionController o_controller;
     OptionModel o_model;
     OptionView o_view;
+    JTextField fNameTF;
+    JTextField lNameTF;
+    JTextField departmentNameTF;
+    JTextField companyNameTF;
+    JSlider ageSlider;
+    JButton saveButton;
+    JLabel summaryLabel;
     
     MainView m_view;
     NavViewPanel nVpanel;
@@ -69,6 +79,7 @@ public class NavController {
         n_view.addCreditButtonListener(new CreditButtonListener());
         n_view.addInstructionsButtonListener(new InstructionsButtonListener());
         n_view.addOptionButtonListener(new OptionsButtonListener());
+        
     }   
     class CDButtonListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
@@ -99,5 +110,5 @@ public class NavController {
         }
     }
     
-    
+
 }
