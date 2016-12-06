@@ -49,7 +49,7 @@ public class OptionView extends JPanel {
         salaryRequest = new JTextField("Enter desired salary");
         add(salaryRequest);
         
-        summaryLabel = new JLabel();
+        summaryLabel = new JLabel(salaryRequest.getText());
         add(summaryLabel);
             
         nVpanel.removeSplash();

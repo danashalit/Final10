@@ -21,8 +21,6 @@ public class MainView extends JPanel {
     JButton mainButton;
     JLabel summaryLabel;
 
-
-
     MainView()
     { 
         JButton welcomeButton = new JButton("Welcome to the Application!");

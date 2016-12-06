@@ -31,6 +31,7 @@ public class OptionModel {
     public void setHour(int hour) {
         this.hour = hour;
     }
+
     
     
 }
