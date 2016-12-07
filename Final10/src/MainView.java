@@ -19,10 +19,13 @@ import javax.swing.JPanel;
 public class MainView extends JPanel {
     NavViewPanel nVpanel;
     JButton mainButton;
-    JLabel summaryLabel;
+    OptionModel o_model;
+    JLabel optionsSummary;
 
-    MainView()
+    MainView(OptionModel o_model)
     { 
+        this.o_model = o_model;
+        
         JButton welcomeButton = new JButton("Welcome to the Application!");
         add(welcomeButton);
         
@@ -31,13 +34,14 @@ public class MainView extends JPanel {
         
         nVpanel = new NavViewPanel();
         add(nVpanel);
+        
+        optionsSummary = new JLabel("Slary: " + o_model.getSalaryRequest() +
+                " Hours: " + o_model.getHours() + " Experience Level: " + 
+                o_model.getExperienceLevel());
+        add(optionsSummary);
 
         nVpanel.removeSplash();
         nVpanel.removeMenu();
-        
-        
     }
-
- 
    
 }

@@ -19,12 +19,14 @@ import javax.swing.JTextField;
  */
 public class OptionView extends JPanel {
    private JSlider hourSlider;
-   JLabel hourQuestion;
    private JTextField salaryRequest;
+   private JTextField experienceLevel;
+   JLabel summaryLabel;
+   JLabel hourQuestion;
    JButton saveOptionsButton;
    NavViewPanel nVpanel;
    JButton optionButton;
-   JLabel summaryLabel;
+   
 
    OptionView o_view;
     
@@ -43,15 +45,18 @@ public class OptionView extends JPanel {
         add(hourQuestion);
         add(hourSlider);
         
-        saveOptionsButton = new JButton("Save Options");
-        add(saveOptionsButton);
-       
+        experienceLevel = new JTextField("Enter experience Level");
+        add(experienceLevel);
+        
         salaryRequest = new JTextField("Enter desired salary");
         add(salaryRequest);
         
-        summaryLabel = new JLabel(salaryRequest.getText());
+        saveOptionsButton = new JButton("Save Options");
+        add(saveOptionsButton);
+        
+        summaryLabel = new JLabel();
         add(summaryLabel);
-            
+                  
         nVpanel.removeSplash();
         nVpanel.removeMenu();
    }
@@ -64,7 +69,6 @@ public class OptionView extends JPanel {
         return saveOptionsButton;
     }
 
-
     public JSlider getHourSlider() {
         return hourSlider;
     }
@@ -73,11 +77,12 @@ public class OptionView extends JPanel {
         return salaryRequest.getText();
     }
 
-
-
-
-
-
-
-
+    public JLabel getSummaryLabel() {
+        return summaryLabel;
+    }
+    
+    public String getExperienceLevel(){
+        return experienceLevel.getText();
+    }
+    
 }

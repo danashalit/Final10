@@ -10,7 +10,8 @@
  */
 public class OptionModel { 
     private String salaryRequest;
-    private int hour;
+    private int hours;
+    private String experienceLevel;
     
     OptionModel(){
         
@@ -24,14 +25,20 @@ public class OptionModel {
         this.salaryRequest = salaryRequest;
     }
 
-    public int getHour() {
-        return hour;
+    public int getHours() {
+        return hours;
     }
 
-    public void setHour(int hour) {
-        this.hour = hour;
+    public void setHours(int hours) {
+        this.hours = hours;
+    }   
+
+    public String getExperienceLevel() {
+        return experienceLevel;
     }
 
-    
+    public void setExperienceLevel(String experienceLevel) {
+        this.experienceLevel = experienceLevel;
+    }
     
 }

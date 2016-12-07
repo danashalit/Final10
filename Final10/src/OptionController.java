@@ -28,9 +28,11 @@ public class OptionController {
             JButton eventSource = (JButton)e.getSource();
             if(eventSource == o_view.saveOptionsButton){
                 o_model.setSalaryRequest(o_view.getSalaryRequest());
-                o_model.setHour(o_view.getHourSlider().getValue());
-                o_view.summaryLabel.setText("Salary: " + o_model.getSalaryRequest() 
-                + " Hours: " + o_model.getHour());
+                o_model.setHours(o_view.getHourSlider().getValue());
+                o_model.setExperienceLevel(o_view.getExperienceLevel());
+                o_view.getSummaryLabel().setText("Salary: " + o_model.getSalaryRequest() +
+                " Hours: " + o_model.getHours() + " Experience Level: " + 
+                o_model.getExperienceLevel());
                 }
             }
         

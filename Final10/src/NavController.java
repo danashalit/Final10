@@ -72,7 +72,7 @@ public class NavController {
         in_view = new InstructionsView(in_model);
         in_controller = new InstructionsController(in_model, in_view); 
         
-        m_view = new MainView();
+        m_view = new MainView(o_model);
         nVpanel = new NavViewPanel();
         n_view.addCDButtonListener(new CDButtonListener());
         n_view.addMainButtonListener(new MainButtonListener());
