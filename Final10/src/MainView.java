@@ -35,7 +35,7 @@ public class MainView extends JPanel {
         nVpanel = new NavViewPanel();
         add(nVpanel);
         
-        optionsSummary = new JLabel("Slary: " + o_model.getSalaryRequest() +
+        optionsSummary = new JLabel("Salary: " + o_model.getSalaryRequest() +
                 " Hours: " + o_model.getHours() + " Experience Level: " + 
                 o_model.getExperienceLevel());
         add(optionsSummary);
